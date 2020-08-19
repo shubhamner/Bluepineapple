@@ -1,0 +1,46 @@
+*title header*
+My blog about my life
+
+*header*
+Links
+Google
+Facebook
+Instagram
+
+*header*
+Meeting with the supervisor
+*subtext*
+14 Dec 2011
+
+today i went to the university by bus
+
+i had a met with my PhD supervisor.
+
+*header*
+New car!!!
+*subtext*
+12 Dec 2011
+
+Today i bought my new car. It's Honda Accord and it's really nice.
+
+I met some friends at a pub.
+
+*header*
+Vist my parents
+*subtext*
+10 Dec 2011
+
+Tried to contact my PhD supervisor. He was out of his office
+
+I visited my parents and we had a nice dinner together.
+
+*header*
+Latest posts
+*all below are internal links*
+Meeting with supervisor
+New Car!!!
+Visting my parents
+
+
+
+*all data under the header must be in list format*
