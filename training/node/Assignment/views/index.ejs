@@ -1,0 +1,143 @@
+<html> 
+  
+<head> 
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+  </script> 
+  <link rel="stylesheet" href="styles.css">
+    <script> 
+
+        $(document).ready(function() { 
+            
+            $("button[id=b1]:submit").click(function() { 
+                
+              //here the value is stored in variable.  
+                //var x = $("input:text").val(); 
+                var m = $("input[id=inp1]:text" ).val();
+                x = parseInt(m);
+                var y;
+                var rem = 0;
+                var add = 0;
+                for(var i=0;i<x;i++){
+                    rem = x%i;
+                        if(rem==0){
+                            add += i;    //add = add + i;
+                        }
+                    }
+                    if(add == x){
+                        //console.log('Perfect');
+                        y = "Perfect";
+                    }else{
+                        //console.log('not perfect');
+                        y = "Not Perfect"
+                    }
+
+                x2 = x.toString();
+                document.getElementById("out1").innerHTML = y; 
+            }); 
+
+            //Assignment 2
+            $("button[id=b2]").click(function() { 
+                
+                //here the value is stored in variable.  
+                  //var x = $("input:text").val(); 
+                  var m = $("input[id=inp2]:text" ).val();
+                  //var str2 = "aaabbbccc";
+                    var obj ={};
+                    for(let s of m){
+                        if(!obj[s]){
+                            obj[s] = 1;
+                        }else {
+                            obj[s] = obj[s]  + 1;
+                        }
+                        
+                    }
+                    var myArray = Object.entries(obj);
+                    len = Object.keys(obj).length;
+                    
+                   // var arr = Object.keys(obj) + ": "+ Object.values(obj);
+                    //console.log(obj)
+                  //x2 = x.toString();
+                  var y2 = obj.toString();
+                  //document.getElementById("out2").innerHTML = arr; 
+                  
+                    for(var e in obj){
+                        document.getElementById("out2").innerHTML = Object.entries(obj);
+                        
+                    }
+                
+                  
+              }); 
+
+               //Assignment 3
+            $("button[id=b3]").click(function() { 
+                
+                //here the value is stored in variable.  
+                  //var x = $("input:text").val(); 
+                  var m = $("input[id=inp3]:text" ).val();
+                  x = parseInt(m);
+                  //var romanTable = {I:1,IV:4,V:5,IX:9,X:10,XL:40,L:50,XC:90,C:100,CD:400,D:500,CM:900,M:1000};
+                  var romanTable2 = {M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1};
+                  var str = "";
+                  for(var i in romanTable2) {
+                      while(x>=romanTable2[i]){
+                          str += i;
+                          x -= romanTable2[i]; 
+                      }
+
+                  }
+                  
+                  document.getElementById("out3").innerHTML = str;
+              }); 
+
+  
+        }); 
+    </script> 
+<style>
+
+</style>
+
+
+</head> 
+  
+<body style="text-align:center;"> 
+<center>
+<!--Assignment 1-->
+   <div class="cls"> 
+       <p class="ques"> Check if the input Number is perfect or not.</p>
+       <p>Enter the number: <input type="text" id="inp1" name="user" placeholder="Enter the number" > </p> 
+  
+    <button id="b1"> Check </button> 
+
+    <p id="out1"></p> 
+</div>
+
+
+
+<!--Assignment 2-->
+<div class="cls"> 
+    <p class="ques">Count no occurrences of characters in String </p>
+    <p>Enter any string: <input type="text" id="inp2" name="user" placeholder="Enter the string" > </p> 
+
+ <button id="b2"> count</button> 
+
+ <p id="out2"></p> 
+ <ul id="list"></ul>
+</div>
+
+
+
+<!--Assignment 3-->
+<div class="cls"> 
+    <p class="ques">Convert Number to Roman Number.</p>
+    <p>Enter the number: <input type="text" id="inp3" name="user" placeholder="Enter the number" > </p> 
+
+ <button id="b3">  convert </button> 
+
+ <p id="out3"></p> 
+</div>
+</center>
+
+</body> 
+  
+</html> 
